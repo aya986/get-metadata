@@ -22,7 +22,7 @@ router.get("/", (req: Request, res: Response) => {
     res.send("Hello world!");
 });
 
-router.post("/process", isAuthenticated, imageController.process);
+router.post("/fetch", isAuthenticated, imageController.fetch);
 
 router.use((err: any, req: Request, res: Response, next: NextFunction) => {
     // console.log(err);
